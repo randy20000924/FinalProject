@@ -10,6 +10,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import './Register.css'
 
 function Copyright() {
   return (
@@ -48,12 +49,12 @@ export default function Register() {
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <div className={classes.paper}>
+      <div className="backH">
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          註冊你的帳號
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -88,7 +89,7 @@ export default function Register() {
             color="primary"
             className={classes.submit}
           >
-            Sign Up
+            註冊
           </Button>
           <Grid container justify="flex-end">
             <Grid item>

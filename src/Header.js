@@ -57,8 +57,8 @@ const Header = props => {
       pageURL: "/"
     },
     {
-      menuTitle: "zoo",
-      pageURL: "/zoo"
+      menuTitle: "Todolist",
+      pageURL: "/todolist"
     },
     {
       menuTitle: "register",
@@ -127,9 +127,9 @@ const Header = props => {
               </Button>
               <Button
                 variant="contained"
-                onClick={() => handleButtonClick("/zoo")}
+                onClick={() => handleButtonClick("/todolist")}
               >
-                可愛動物介紹
+                TodoList
               </Button>
               <Button
                 variant="contained"

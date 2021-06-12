@@ -1,7 +1,7 @@
-import React from "react";
+import React  from "react";
 import "./styles.css";
 import Home from "./page/Home/Home";
-import Zoo from "./page/Zoo/Zoo";
+import Todolist from "./page/Todolist/Todolist";
 import About from "./page/About/About";
 import Login from "./page/Login/Login";
 import Register from "./page/Register/Register";
@@ -19,10 +19,11 @@ export default function App() {
       <Switch>
         <Route exact from="/" render={props => <Home {...props} />} />
         <Route exact path="/about" render={props => <About {...props} />} />
-        <Route exact path="/zoo" render={props => <Zoo {...props} />} />
+        <Route exact path="/todolist" render={props => <Todolist {...props} />} />
         <Route exact path="/login" render={props => <Login {...props} />} />
         <Route exact path="/register" render={props => <Register {...props} />} />
       </Switch>
     </div>
   );
 }
+
