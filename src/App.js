@@ -8,8 +8,11 @@ import Register from "./page/Register/Register";
 import Header from "./Header";
 import { Route, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
+import ReactGA from 'react-ga'
 
 const useStyles = makeStyles({});
+ReactGA.initialize('G-KT3VC27GPY');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default function App() {
   const classes = useStyles();
