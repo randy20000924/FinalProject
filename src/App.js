@@ -1,4 +1,3 @@
-import React  from "react";
 import "./styles.css";
 import Home from "./page/Home/Home";
 import Todolist from "./page/Todolist/Todolist";
@@ -9,13 +8,17 @@ import Header from "./Header";
 import { Route, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import ReactGA from 'react-ga'
+import React, { useEffect } from 'react';
 
 const useStyles = makeStyles({});
-ReactGA.initialize('UA-199389612-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default function App() {
   const classes = useStyles();
+  useEffect(() => {
+    ReactGA.initialize('UA-199389612-1');
+    // To Report Page View 
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [])
   return (
     <div className={classes.container}>
       <Header />
