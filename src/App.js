@@ -9,16 +9,18 @@ import { Route, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import ReactGA from 'react-ga'
 import React, { useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 
 const useStyles = makeStyles({});
+ReactGA.initialize('UA-199389612-2');
 
 export default function App() {
+  const location = useLocation();
   const classes = useStyles();
   useEffect(() => {
-    ReactGA.initialize('UA-199389612-1');
     // To Report Page View 
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, [])
+    ReactGA.pageview(location.pathname + location.search);
+  }, [location]);
   return (
     <div className={classes.container}>
       <Header />
